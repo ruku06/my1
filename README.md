@@ -136,4 +136,30 @@ docker pull rukkmini2006/redis1
 docker exec -it redis-cli
 docker rmi rukmini2006/redis1
 docker logout
+----------------------------------------------------------------------------------------
+6.kubernet nagios
+minikube start 
+kubectl set image deployment/mynginx nginx=nginx:latest
+kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
+kubectl scale deployment mynginx --replicas=4
+kubectl port-forward svc/mynginx 8081:80
+Minikube dashboard
+minikube stop
+docker pull jasonrivers/nagios:latest
+docker run --name nagiosdemo -p 8888:80 jasonrivers/nagios:latest
+------------------------------------------------------------------------------------------
+sudo apt update 
+sudo apt-get install docker 
+sudo apt install git 
+sudo apt install nano 
+git clone 
+ls
+cd
+nano Dockerfile
+docker build -t <imagename> .
+docker run –d --name app-demo –p 6060:8080 <image name>
+
+
+
+
 
